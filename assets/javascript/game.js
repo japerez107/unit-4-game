@@ -17,7 +17,8 @@ $(document).ready(function () {
     var randomNum = Math.floor(Math.random() * 101) + 19;
     $("#randomNumber").text(randomNum);
 
-    // click functions for images
+    // click functions for images 
+    // * I think I coded this the long way and there is probably an easier way to code this*
 
     $("#gem1").on('click', function () {
         totalScore = totalScore + gem1;
@@ -50,16 +51,15 @@ $(document).ready(function () {
         winLose();
     });
 
+
     // function to decipher if the score wins or loses
     var winLose = function () {
         if (totalScore === randomNum) {
-
             winner();
 
             resetGem();
         }
         else if (randomNum < totalScore) {
-
             loser();
 
             resetGem();
@@ -88,7 +88,6 @@ $(document).ready(function () {
 
         randomNum = Math.floor(Math.random() * 101) + 19;
         $("#randomNumber").text(randomNum);
-
 
         totalScore = 0;
 
